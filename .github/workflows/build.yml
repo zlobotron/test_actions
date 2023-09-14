@@ -23,7 +23,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn clean install sonar:sonar -U \
+      run: |
+        mvn clean install sonar:sonar -U \
         -Dsonar.host.url=https://sonarcloud.io \
         -Dsonar.organization=zlobotron \
         -Dsonar.projectKey=zlobotron_test_actions \
