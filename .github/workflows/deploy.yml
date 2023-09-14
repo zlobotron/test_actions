@@ -26,4 +26,5 @@ jobs:
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
       - name: Publish to the Maven Central Repository
+        run: cat /home/runner/.m2/settings.xml
         run: mvn --batch-mode deploy
