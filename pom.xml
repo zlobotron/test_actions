@@ -18,10 +18,6 @@
         <url>https://github.com/infobip/wf</url>
     </scm>
 
-    <pluginGroups>
-        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
-  </pluginGroups>
-
     <licenses>
         <license>
             <name>MIT License</name>
