@@ -23,10 +23,12 @@ jobs:
           java-version: ${{ matrix.java }}
           distribution: 'temurin'
           server-id: ossrh
-          server-username: ${{ secrets.USER }}
-          server-password: ${{ secrets.PASS }}
+          server-username: ${{ secrets.MAVEN_USER }}
+          server-password: ${{ secrets.MAVEN_PASS }}
       - name: Check env
         run: env
+      - name: Check cli
+        run: echo "MAVEN_USER is: ${MAVEN_USER}"; echo "MAVEN_PASS is: ${MAVEN_PASS}"
       - name: Check settings.xml
         run: cat /home/runner/.m2/settings.xml
       - name: Publish to the Maven Central Repository
